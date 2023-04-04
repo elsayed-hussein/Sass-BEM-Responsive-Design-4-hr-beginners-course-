@@ -31,3 +31,23 @@ and import it into the main scss file with
 ```scss
 @forward "folderName";
 ```
+
+## sass variables
+
+set the variables at the root to override all variables
+
+to set the variable
+
+```scss
+:root {
+  --background-color: hsl(0, 0%, 11%);
+}
+```
+
+to call or load a variable
+
+```scss
+body {
+  background-color: var(--background-color);
+}
+```
