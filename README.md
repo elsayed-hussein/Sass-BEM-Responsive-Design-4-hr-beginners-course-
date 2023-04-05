@@ -113,3 +113,58 @@ to use mixin
 @include u.breakpoint(large) {
 }
 ```
+
+## functions
+
+to create a function
+
+```scss
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error "Invalid pixel";
+  }
+} ;
+```
+
+to call the function
+
+```scss
+@use "../util" as u;
+
+h1 {
+  font-size: u.rem(28);
+}
+```
+
+## to extend the rows from anther class
+
+```scss
+.grid__sidebar {
+  background-color: hsl(300, 100%, 30%);
+  &--black {
+    @extend .grid__sidebar;
+    color: hsl(0, 0%, 0%);
+  }
+}
+```
+
+## to create placeholder for css rolls
+
+```scss
+%placeholderName{
+  role
+}
+```
+
+to use the placeholder
+
+```scss
+.grid__sidebar {
+  @extend %placeholderName;
+  color: hsl(0, 0%, 0%);
+}
+```

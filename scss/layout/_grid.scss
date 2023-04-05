@@ -39,5 +39,9 @@
     @include u.breakpoint-down(medium) {
       text-align: center;
     }
+    &--black {
+      @extend .grid__sidebar;
+      color: hsl(0, 0%, 0%);
+    }
   }
 }
