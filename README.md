@@ -23,13 +23,19 @@ name the partial file with "\_"
 and import it into the main \_index.scss file in the same folder with
 
 ```scss
-@forward "fileNmeWithOut_orScss";
+@forward "fileNmeWithOutDotScss";
 ```
 
 and import it into the main scss file with
 
 ```scss
 @forward "folderName";
+```
+
+or
+
+```scss
+@import "filepath/fileNmeWithOutDotScss";
 ```
 
 ## sass variables
@@ -78,15 +84,6 @@ body {
 }
 ```
 
-for
-
-```scss
-.grid {
-  .grid__main {
-  }
-}
-```
-
 or
 
 ```scss
@@ -100,7 +97,6 @@ for
 
 ```scss
 .grid {
-  .grid,
   .grid__main {
   }
 }
