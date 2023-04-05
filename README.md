@@ -87,6 +87,25 @@ for
 }
 ```
 
+or
+
+```scss
+.grid {
+  #{&}__main {
+  }
+}
+```
+
+for
+
+```scss
+.grid {
+  .grid,
+  .grid__main {
+  }
+}
+```
+
 ## mixins and builtIn modules
 
 to make mixin
